@@ -1,0 +1,20 @@
+{
+  "name": "invitacion",
+  "version": "1.0.0",
+  "author": "KoriKonchi <korikonchi91@gmail.com>",
+  "browserslist": "> 0.2%, last 2 versions, not dead",
+  "source": "src/index.html",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn parcel serve --no-cache",
+    "build": "yarn parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1"
+  },
+  "dependencies": {
+    "@swc/helpers": "^0.2.14",
+    "regenerator-runtime": "^0.13.9"
+  }
+}

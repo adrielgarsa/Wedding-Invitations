@@ -1,0 +1,100 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  outline: none;
+}
+
+$min_width: 320px !default;
+$max_width: 2800px !default;
+$min_font: 16px !default;
+$max_font: 32px !default;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  max-height: 100vh;
+  max-width: 100vw;
+  width: 100%;
+  min-width: $min-width;
+  overflow: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $font-color;
+  font-family: $font-family;
+  font-kerning: normal;
+  height: 100%;
+  min-width: $min-width;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: $background-color;
+  background-color: rgb(255, 255, 255);
+}
+
+a,
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  appearance: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  text-decoration: none;
+
+  &:disabled {
+    cursor: not-allowed !important;
+  }
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ */
+.reader-only,
+.hidden {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  width: 1px !important;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+svg,
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $colorfont;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $colorfont;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $colorfont;
+}
