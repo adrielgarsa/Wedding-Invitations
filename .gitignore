@@ -1,5 +1,5 @@
-dist/*
+dist/
 
-.parcel-cache/*
+.parcel-cache/
 
-node_modules/*
+node_modules/
